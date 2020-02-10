@@ -6,6 +6,11 @@
 </head>
 <body>
 
+	<?php 
+		$nome= "vilmar";
+		echo $nome;//exibindo a variavel
+	 ?>
+
 
 
 </body>
