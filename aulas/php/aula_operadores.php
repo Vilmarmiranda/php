@@ -28,10 +28,40 @@ echo "<br><br>";
 		$preco=$_GET["preco"];
 		echo "O preço do produto é R$ ". number_format($preco,2)."<br>";
 
-		$preco = $preco+($preco*10/100);
-		//$preco +=($preco*10/100); o resultado será igual a espressao acima
+		$preco +=($preco*10/100);
+		//$preco = $preco+($preco*10/100); o resultado será igual a espressao acima
 
-		echo "O novo preço com 10% de aumento é $preco";
+		echo "O novo preço com 10% de aumento é R$ ". number_format($preco,2);
+
+		echo "<br><br>";
+
+		$anoAtual=$_GET["aa"];
+		echo "Ano atual é: $anoAtual e o proximo ano é: ". ++$anoAtual ; // Nessa linha de comando, o usuario digita o ano atual e o sistema informa qual será o proximo ano
+
+		echo "<br><br>";
+
+		//VARIAVEL DE REFERENCIA
+		$a=3;
+		$b=$a;
+		$b+=5;
+		echo "A variavel A vale $a";
+		echo "<br> A variavel B vale $b";		
+
+		echo "<br><br>";
+
+		$a=3;
+		$b=&$a; //colocar o & a variavel passa ser uma referencia
+		$b+=5;
+		echo "A variavel A vale $a";
+		echo "<br> A variavel B vale $b";	
+
+		echo "<br><br>";
+
+		//VARIAVEL DE VARIAVEL
+		$x="abc";
+		$$x="def";
+		echo "<br>O conteudo da variavel X é $x";
+		echo "<br> A variavel criada recebeu o valor $abc";			
 
 	?>
 </body>
